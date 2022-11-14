@@ -86,10 +86,10 @@ end
 --concatenates your strings with '\n' dynamically
 --@param ... string
 --@return    string
-function uteis.dinamic_concat(...)
+function str.dinamic_concat(...)
     local tab = {...}
     ---@diagnostic disable-next-line
-    for str = 1, #tab do tab[str] = uteis.split(tab[str], '\n') end
+    for str = 1, #tab do tab[str] = str.split(tab[str], '\n') end
     local string = ''
     for cont = 1, #tab[1] do
         for init = #tab, 1, -1 do
