@@ -1,5 +1,7 @@
 local tables = {}
 
+--Get all keys of the table `x`
+--@param x table
 function tables.GetKeys(x)
   local keys = {}
   for k in pairs(x) do
@@ -8,6 +10,8 @@ function tables.GetKeys(x)
   return keys
 end
 
+--Get all keys of the table `x`
+--@param x table
 function tables.GetValues(x)
   local values = {}
   for _, v in pairs(x) do
@@ -16,7 +20,10 @@ function tables.GetValues(x)
   return values
 end
 
-function uteis.sorted(tab, reverse)
+--Ordener your table.
+--@param tab     table
+--@param reverse boolean
+function tables.sorted(tab, reverse)
     reverse = reverse or false
 	local ordened = tab
 	for detecter = 1, #ordened do
